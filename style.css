@@ -1,0 +1,149 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white:#fff;
+    --light-grey:#444343;
+    --grey:#3c3c3c;
+    --blue:#119ec9;
+    --playgd-color:#f7eedd;
+    --grid-cell: 6;
+    --gap: 1rem;
+    --time:0.5sec;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.final_screen_container{
+    position: fixed;
+    /* position: absolute; */
+    inset:0;
+    background-color: rgb(119, 118, 115,0.684);
+    display: grid;
+    place-items: center;
+    /* opacity: 0; */
+    visibility: hidden;
+}
+
+.final_screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: var(--gap);
+    padding: 2rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 4rem 2rem;
+}
+
+.playground{
+    background-color: var(--playgd-color);
+    height: 90vmin;
+    width: 90vmin;
+    border-radius: 1rem;
+    display: grid;
+    gap:0.5%;
+    /* grid-template-columns: ; */
+}
+
+.btn{
+    padding: 0.05rem 0.5rem ;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 0.25rem;
+    font-weight: 300;
+    border: none;
+    cursor: pointer;
+}
+
+.cell{
+    border: 2px solid red;
+    border-radius: 1rem;
+    display: grid;
+    place-items: center;
+    background-color: white;
+    color: #119ec9;
+    transition: 0.3s;
+}
+
+.cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius:inherit ;
+    /* animation: spin 3s 1; */
+}
+
+.card_image{
+
+    display: grid;
+    place-items: center;
+}
+
+
+
+.features{
+    display: flex;
+    column-gap: 1rem;
+}
+
+.final_screen_heading{
+    color: var(--grey);
+    font-size: 2rem;
+}
+
+.wrong-group{
+    color: rgb(91, 91, 91);
+}
+
+.final-btn{
+    margin-top: 1rem;
+}
+
+.timer{
+    
+    color: rgb(25, 212, 203);
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+
+/* control properties  */
+
+
+@keyframes spin{
+    0%{
+        transform: rotateY(0deg)
+    }
+    100%{
+        transform: rotateY(180deg)
+    }
+}
+@keyframes antispin{
+    0%{
+        transform: rotateY(180deg)
+    }
+    100%{
+        transform: rotateY(0deg)
+    }
+}
+
+/* spin should be added to cell  */

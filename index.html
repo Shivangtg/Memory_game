@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Memory Game</title>
+</head>
+<body>
+    
+    <div class="container">
+        <!-- selcting_the_grid -->
+        <form>
+            <select class="select-number-of-cells">
+                <option value="16" selected>16</option>
+                <option value="36">36</option>
+                <option value="64">64</option>
+            </select>
+        </form>
+
+
+        <!-- main_playground -->
+        <div class="playground"></div>
+        
+        <!-- final_screen -->
+        <div class="final_screen_container">
+            <div class="final_screen">
+            <h3 class="final_screen_heading">
+                Game Over
+            </h3>
+            
+            <div class="final_screen_time">
+                <span>Time Spent:</span>
+            </div>
+            
+            <div class="wrong-group">
+                WRONG ATTEMPTS: <span class="wrong"></span>
+            </div>
+
+            <button class="btn final-btn">
+                Start Again
+            </button>
+        </div>
+        </div>
+
+        <!-- feature_section -->
+         <div class="features">
+            <div class="timer">
+                <span>0</span>min <span>0</span>sec
+            </div>
+            <button class="btn restart-btn">
+                New Game
+            </button>
+         </div>
+
+    </div>
+    
+    <!-- <script src="script.js"></script> -->
+    <script src="script.js" type="module"></script>
+</body>
+</html>
